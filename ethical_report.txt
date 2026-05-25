@@ -1,0 +1,23 @@
+Ethical analysis – mental health prediction model
+
+Fairness by gender (before mitigation):
+
+- Female: pos_rate=0.791, TPR=0.867, FPR=0.615, precision=0.765, n=43
+- Male: pos_rate=0.709, TPR=0.800, FPR=0.569, precision=0.686, n=148
+- Other: pos_rate=0.444, TPR=0.800, FPR=0.000, precision=1.000, n=9
+
+Effect of simple re‑weighting:
+
+Original:
+  - Female: 0.814
+  - Male: 0.736
+  - Other: 0.889
+Weighted:
+  - Female: 0.814
+  - Male: 0.784
+  - Other: 0.889
+
+Key points:
+- The model can exhibit different error rates across gender groups.
+- Re‑weighting trades a little performance for better balance.
+- Any deployment should include human oversight and continuous monitoring.
